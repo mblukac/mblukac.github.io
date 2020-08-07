@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "CV"
+title: ""
 permalink: /cv/
 author_profile: true
 redirect_from:
@@ -9,51 +9,40 @@ redirect_from:
 
 {% include base_path %}
 
-Education
-======
-* B.S. in GitHub, GitHub University, 2012
-* M.S. in Jekyll, GitHub University, 2014
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-
 Work experience
 ======
-* Summer 2015: Research Assistant
-  * Github University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
+__LSE Fellow in Computational Social Science__, Department of Methodology, London School of Economics and Political Science, 2020—Present
+<br>
+<span style="font-size:0.8em; line-height: 1.2em; display: block;">As LSE Fellow, I am mainly involved in teaching advanced courses in master's programmes ([MSc in Social Research Methods](https://www.lse.ac.uk/Methodology/Study/MSc-Social-Research-Methods) and [MSc in Applied Social Data Science](https://www.lse.ac.uk/Methodology/Study/MSc-Applied-Social-Data-Science)). I lead seminars in [Computer Programming](https://www.lse.ac.uk/resources/calendar/courseGuides/MY/2019_MY570.htm) (using Python and R) and [Social Network Analysis](https://www.lse.ac.uk/resources/calendar/courseGuides/MY/2019_MY561.htm). My methodological research is focused on discovering heterogeneity of treatment effects and power analysis in conjoint experiments and how causal inference fails under violation of _no interference_ assumption in networked social contexts ([see poster here](/portfolio/NetworkInterference/)).</span>
 
-* Fall 2015: Research Assistant
-  * Github University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
-  
-Skills
-======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+__Associate__, Institute of New Economic Thinking, University of Oxford, 2020—Present
+<br>
+<span style="font-size:0.8em; line-height: 1.2em; display: block;">Following my research visit in Fall 2019, I became an Associate of the [Complexity Economics](https://www.inet.ox.ac.uk/research/programmes/complexity-economics/) program, led by [J Doyne Farmer](https://www.inet.ox.ac.uk/people/j-doyne-farmer/). The group uses tools from complex systems science to generate new insights into a wide range of economic problems. With [Penny Mealy](https://www.inet.ox.ac.uk/people/penny-mealy/) and [R. Maria Del Rio-Chanona](https://www.inet.ox.ac.uk/people/rita-maria-del-rio-chanona/), we are currently developing a project focusing on skill use and retraining in the wake of automation and digitalisation.</span>
 
-Publications
-======
-  <ul>{% for post in site.publications %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
+__Researcher__, Centre for Sociological Research, KU Leuven, 2016-2020
+<br>
+<span style="font-size:0.8em; line-height: 1.2em; display: block;">As a member of a Flemish Research Council (FWO) funded project on “How are social divides produced in contemporary European labour markets?” under supervision of Valeria Pulignano, Wim van Oorschot, and Bart Meuleman, I developed [new research methodologies for measuring labour market segmentation in Europe by use of latent class analysis](/publication/LukacDoerflingerPulignano_2019_SIR/). I programmed an [agent-based model of recruitment under reputation systems at online labour market platforms](/publication/LukacGrow_2020_JCSS) and used large web-scraped data to investigate segmentation in online labour markets.</span>
+
+__Data Scientist__, IBM International Services Centre, 2015-2016
+<br>
+<span style="font-size:0.8em; line-height: 1.2em; display: block;">Being part of the Client Experience team, I led several experimental and observational studies with focus on monitoring and improving customer experience. As part of my team’s efforts, I helped develop an automated early warning system that used text analytics to predict emerging problems during the sales process. I designed a study to measure a causal effect of an innovative sales’ practice on final transaction satisfaction. For these efforts, I received _IBM Manager’s Excellence Award_ (2016) for contributions in statistics and data science. On top of my analytical work, I successfully advocated for a change in metric used for measuring client satisfaction from year-to-date to a 12-month-rolling, which is still in use. During my time at IBM, I shared my knowledge by teaching R and statistics to the Client Experience for Sales team.</span>
+
   
-Talks
+Education
 ======
-  <ul>{% for post in site.talks %}
-    {% include archive-single-talk-cv.html %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
+__Ph.D. in Sociology__, KU Leuven, 2020 (dissertation submitted)
+<br>
+<span style="font-size:0.8em; line-height: 1.2em; display: block;">Dissertation: _Computational approaches to labour market segmentation_, supervised by Valeria Pulignano, Wim van Oorschot, and Bart Meuleman</span>
+
+__M.Sc. in Statistics__, KU Leuven, 2020 (expected)
+<br>
+<span style="font-size:0.8em; line-height: 1.2em; display: block;">Thesis: _Discovering heterogeneity of treatment effects in conjoint experiments: conjoint finite mixture model_, supervised by Geert Verbeke</span>
+
+__M.Sc in Social Policy Analysis__, KU Leuven, 2015
+<br>
+<span style="font-size:0.8em; line-height: 1.2em; display: block;">Thesis: _The effects of democratic institutionalization and satisfaction with democracy on subjective well-being in Europe: comparing random and fixed effects multilevel approaches_, supervised by Jacques Hagenaars</span>
+
+__M.A. in Governance and Global Affairs__, Moscow State Institute for International Relations, 2014
+<br>
+<span style="font-size:0.8em; line-height: 1.2em; display: block;">Thesis: _Domestic factors influencing foreign policy: case study of Ukraine 2008-2012_, supervised by Andrey Sushentsov</span>
+
