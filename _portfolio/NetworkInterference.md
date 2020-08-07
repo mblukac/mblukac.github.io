@@ -1,0 +1,15 @@
+---
+title: "Probing causal inference in the face of interference: simulations of social networks with ERGMs"
+collection: publications
+excerpt: "Work in progress: presented at the International Conference on Computatinal Social Science 2019 in Amsterdam"
+date: 2019-07-17
+
+---
+
+<span style="font-size:0.8em; line-height: 1.2em; display: block;">The potential outcomes (PO) framework (Rubin 1974) is largely considered the golden standard in the social sciences; formal theory for inferring causation in social networks is, however, still in its infancy. PO commonly employs a “no interference” assumption (SUTVA; Cox 1958), stating that outcomes of one individual are not influenced by the exposures of others. Such assumption is implausible to hold in many social scientific settings (Sobel 2006; VanderWeele & An 2013). Various adjustments have been suggested in the literature, but so far very few can be realistically used in observational survey research due to lack of survey data that explicitly collect information on networks. In this project, I propose a computational methodology for the social sciences by using simulation for estimating lower and upper bounds of interference in causal inference studies based on large survey observational datasets.</span>
+
+<img src='/images/Interference_Example.png' width="50%" height="50%">
+
+<span style="font-size:0.8em; line-height: 1.2em; display: block;">The method is illustrated on the case of attitudes towards welfare and redistribution to the unemployed. Economic self-interest theory postulates that an individual is more likely to support redistribution towards a needy group if they are themselves part of it (see Alt & Iversen 2016). The sociological literature, however, maintains that self-interest covers also people from respondents’ social circles––friends and family (see van Oorschot 2013). Unemployment of a close person is as well likely to change our attitudes in favour of redistribution. This question can be framed as a problem of interference, as treatment (unemployment) of close relatives can influence our own attitudes towards redistribution. Moreover unemployment is not randomly assigned and is more likely to occur for some social groups---e.g. with low education, that are in return more likely to be friends/family due to homophily and assortative mating. To date, this question remains unsolved mainly due to lack of data on redistribution attitudes and social networks. Hence, estimation of the self-interest effect continues to be confounded by interference (see Sussman & Airoldi 2017). Proposed methodology aims to solve this short-coming by combining information from two distinct datasets via a set of overlapping auxiliary variables.</span>
+
+<span style="font-size:0.8em; line-height: 1.2em; display: block;">This work has been presented at the International Conference on Computatinal Social Science 2019 in Amsterdam. See the whole poster [here](/images/Poster_Lukac_Probing Causal Inference in the Face of Interference.pdf).</span>
