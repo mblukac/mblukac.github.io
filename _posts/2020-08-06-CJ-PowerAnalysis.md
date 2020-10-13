@@ -14,7 +14,7 @@ We are currently working on a paper that would offer more in-depth explanation. 
 
 
 ## How to use the App?
-<img src="/images/CE-PAT-tutorial.png" width="90%">
+<img src="https://github.com/mblukac/mblukac.github.io/blob/master/images/CE-PAT-clone.png" width="90%">
 
 
 ## Setup
