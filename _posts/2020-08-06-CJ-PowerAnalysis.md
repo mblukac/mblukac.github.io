@@ -40,17 +40,13 @@ First make sure that you have the most up-to-date version of [R](https://www.r-p
 
 Open RStudio and install the necessary libraries by running the following command:
 
-```{r}
-install.packages(c("shiny", "ggplot2", "shinythemes", "shinyWidgets", "shinydashboard", "ggrepel"))
-```
+`install.packages(c("shiny", "ggplot2", "shinythemes", "shinyWidgets", "shinydashboard", "ggrepel"))`
 
 ### 2. Get the App
 
 In the second step, you will download the App locally to your computer. Copy the following link:
 
-```{r}
-https://github.com/mblukac/conjoints-power-shiny.git
-```
+`https://github.com/mblukac/conjoints-power-shiny.git`
 
 Open RStudio and follow these steps. In the last window, paste the copied URL ☝️ to `Repository URL`.
 
@@ -64,23 +60,17 @@ When you hit `Create Project`, RStudio will connect to GitHub and get the newest
 
 Go to console and run the app script by typing (or copy-pasting) the following:
 
-```{r}
-source("app.R")
-```
+`source("app.R")`
 
 This will make sure that all the libraries are properly loaded and ready to run the App.
 
 In the final step, run the follwing command in the console:
 
-```{r}
-runApp("app.R")
-```
+`runApp("app.R")`
 
 This will run the application locally on your computer. You can always re-run `runApp("app.R")`if you close the window with the App. If RStudio doesn't open the App for you after running `runApp("app.R")`, look to the console for the following lines:
 
-```{r}
-Listening on http://127.0.0.1:xxxx
-```
+`Listening on http://127.0.0.1:xxxx`
 
 The last part (`:xxxx`) will be specific to your instance. Copy and paste the whole link `http://127.0.0.1:xxxx` to your browser. This should open the App for you. Enjoy!
 
@@ -90,8 +80,6 @@ The last part (`:xxxx`) will be specific to your instance. Copy and paste the wh
 
 We put a lot of work into this, so please don't forget to cite our work if you use it.
 
-```{r}
-Lukac, M. & Stefanelli, A. (2020). Conjoint Experiments: Power Analysis Tool. Retrieved from https://mblukac.shinyapps.io/conjoints-power-shiny/
-```
+`Lukac, M. & Stefanelli, A. (2020). Conjoint Experiments: Power Analysis Tool. Retrieved from https://mblukac.shinyapps.io/conjoints-power-shiny/`
 
 I cannot stress this enough, 🔥please🔥 get in touch with your feedback or questions. It will be **immensely** helpful for us to hear what the community thinks about this, so that we can all develop something useful for everyone.
