@@ -1,11 +1,11 @@
 ---
-title: 'Conjoint survey experiments and power analysis'
-date: 2020-08-06
+title: "Conjoint survey experiments and power analysis"
+date: '2020-08-06'
 permalink: /posts/2020/08/cj_poweranalysis/
 tags:
-  - conjoint experiment
-  - power analysis
-  - online survey experiment
+- conjoint experiment
+- power analysis
+- online survey experiment
 ---
 
 Are you running a conjoint experiment and struggling with design considerations? Unsure about how many respondents, trials or levels for a variable are needed? This [Shiny App](https://mblukac.shinyapps.io/conjoints-power-shiny/) for calculating power of a conjoint experimental design is here to help you.
