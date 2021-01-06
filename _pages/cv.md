@@ -30,13 +30,9 @@ __Data Scientist__, IBM International Services Centre, 2015-2016
   
 Education
 ======
-__Ph.D. in Sociology__, KU Leuven, 2020 (dissertation submitted)
+__Ph.D. in Social Sciences__ (Computational Social Science), KU Leuven, 2021 (dissertation submitted)
 <br>
-<span style="font-size:0.8em; line-height: 1.2em; display: block;">Dissertation: _Computational approaches to labour market segmentation_, supervised by Valeria Pulignano, Wim van Oorschot, and Bart Meuleman</span>
-
-__M.Sc. in Statistics__, KU Leuven, 2020 (expected)
-<br>
-<span style="font-size:0.8em; line-height: 1.2em; display: block;">Thesis: _Discovering heterogeneity of treatment effects in conjoint experiments: conjoint finite mixture model_, supervised by Geert Verbeke</span>
+<span style="font-size:0.8em; line-height: 1.2em; display: block;">Dissertation: _Computational approaches to labour market segmentation_, supervised by Valeria Pulignano, Wim van Oorschot, and Bart Meuleman<br>-  Finished all courses in M.Sc. Statistics at the Leuven Statistics Research Centre (L-STAT)</span>
 
 __M.Sc in Social Policy Analysis__, KU Leuven, 2015
 <br>

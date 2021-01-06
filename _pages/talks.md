@@ -5,6 +5,18 @@ permalink: /talks/
 author_profile: true
 ---
 
+2020
+
+***
+
+__Conference on Digital Experimentation (CODE) @ MIT__ (online)
+<ul>
+    <li><p style="font-size:11pt;">Discovering heterogeneity of treatment effects in conjoint experiments: Conjoint finite mixture model</p></li>
+</ul>
+
+<br>
+<br>
+
 2019
 
 ***

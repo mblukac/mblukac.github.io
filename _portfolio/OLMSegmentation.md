@@ -1,7 +1,7 @@
 ---
-title: "Online labour market segmentation: evidence from a regression mixture model and network analysis of skill use"
+title: "Unpacking segmentation of online labour markets through network of skills."
 excerpt: "Work in progress: Probing labour market segmentation theory in online labour market platforms"
-date: 2020-08-01
+date: 2020-12-01
 collection: portfolio
 ---
 
