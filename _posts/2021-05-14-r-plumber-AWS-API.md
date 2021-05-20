@@ -117,5 +117,5 @@ Running plumber API at http://0.0.0.0:8000
 Running swagger Docs at http://127.0.0.1:8000/__docs__/
 ```
 
-you are awesome and you just ran your first API on AWS EC2 server. Are you curious what it can do? Take the __Public IPv4 DNS__ link (the one looking like http://ec2-*-*-***-*.eu-west-2.compute.amazonaws.com) and add `:8000/sum?b=1&a=3` right at the end. The final link should look like this: `http://ec2-*-*-***-*.eu-west-2.compute.amazonaws.com:8000/sum?b=1&a=3`. See the "4"? Congrats, that's calculated by your awesome API! :smile: :fire:
+you are awesome and you just ran your first API on AWS EC2 server. Are you curious what it can do? Take the __Public IPv4 DNS__ link (the one looking like http://ec2-*-*-***-*.eu-west-2.compute.amazonaws.com) and add `:8000/sum?b=1&a=3` right at the end. The final link should look like this: `http://ec2-*-*-***-*.eu-west-2.compute.amazonaws.com:8000/sum?b=1&a=3`. See the "4"? Congrats, that's calculated by your awesome API! 😊 🔥
 
