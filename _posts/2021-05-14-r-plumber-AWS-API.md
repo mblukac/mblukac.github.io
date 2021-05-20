@@ -23,7 +23,9 @@ In the next step, we need to modify the options how we will be able to access th
   - Add "Custom TCP Rule", change Port Range to "8000" — this will be a way in to access your API
   - Add "Custom ICMP Rule IPv4", change Protocol "Echo Request", and add Source "0.0.0.0/0" - this will be to check whether everything works well and to troubleshoot. This can be later removed when not necessary.
 
-<img src="/images/api-tutorial-pic1.png" width="90%" align = "middle">
+<center>
+<img src="/images/api-tutorial-pic1.png" width="100%">
+</center>
 
 You can confirm your selections and move further. You will be asked about a _SSH key pair__. This is a tricky one: This window creates a file that will be used to access the EC2 server from your Terminal. We will need to do this to set up some things later. You can use an existing key pair if you have one (but since you are following this tutorial, it is more likely that you don't). Select __Create a new key pair__ and name it (e.g. "my-plumber-key"). This will initiate a download of a new file "my-plumber-key.pem". For now you can leave it in "Downloads" (if you are on Mac), but later it would be better to store it somewhere safe. Hit __Launch__!
   
@@ -45,7 +47,7 @@ Now that you are connected to your AWS EC2 instance, we need to install some mis
   - Again, you can check if there is a new folder by running `ls`. If you see it there, you can enter it by running `cd libsodium-stable`.
   - When you are in, execute the following commands: 
 
-```shell
+```
 ./configure
 make && make check
 sudo make install
