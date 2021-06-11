@@ -63,9 +63,9 @@ Now that you are connected to your AWS EC2 instance, we need to install some mis
 `sudo make install` <br>
 
 
-  - It will take a while to install. When everything finishes, run a final command `sudo apt install libsodium-dev`. Now you are locked and loaded to do some R magic 🪄
+  - It will take a while to install. When everything finishes, run a final command `sudo apt install libsodium-dev`. If this fails, see the following [page](https://itsfoss.com/could-not-get-lock-error/) for troubleshooting. Sometimes Ubuntu decides to start updating some system files in the background and will prevent you from finishing the installation. If no errors occured, you are ready to do some R magic 🪄 
   
-Now we need to get into R and install {plumber}. We do this by `sudo R` and install plumber by `install.packages("plumber")`. Watch closely that you get any errors here. If the installation of Libsodium failed, you'll see errors. And yay :raised_hands:! Verify it worked by loading the package by running `library(plumber)`.
+Now we need to get into R and install {plumber}. We do this by `sudo R` and install plumber by `install.packages("plumber")`. Watch closely that you get any errors here. If the installation of Libsodium failed, you'll see errors. And yay! Verify it worked by loading the package by running `library(plumber)`.
 
 
 ## Make things happen in R
