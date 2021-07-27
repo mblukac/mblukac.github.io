@@ -111,7 +111,7 @@ In `run-my-plumber.R`, we add the following:
 ```r
 library(plumber)
 
-root <- pr(paste0(getwd(), "/sample-plumber.R"))
+root <- pr(paste0(getwd(), "/my-plumber.R"))
 pr_run(root, host = "0.0.0.0", port = 8000)
 ```
 
