@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-I am a computational social scientist, statistician, and avid R programmer. I am currently an [LSE Fellow in Computational Social Science](https://www.lse.ac.uk/Methodology/People/Academic-Staff/Martin-Lukac/Martin-Lukac) in [the Department of Methodology](https://www.lse.ac.uk/methodology) at [the London School of Economics and Political Science](https://www.lse.ac.uk/) and an Associate at [the Institute for New Economic Thinking](https://www.inet.ox.ac.uk) at [the University of Oxford](https://www.ox.ac.uk). I finished my PhD at [the Centre for Sociological Research](https://soc.kuleuven.be/ceso) at [KU Leuven](https://www.kuleuven.be/kuleuven/) in Belgium.
+I am a computational social scientist, statistician, and avid R programmer. I am currently a Research Data Scientist at [QuantCo](https://quantco.com). Previously, I was a [LSE Fellow in Computational Social Science](https://www.lse.ac.uk/Methodology/People/Academic-Staff/Martin-Lukac/Martin-Lukac) in [the Department of Methodology](https://www.lse.ac.uk/methodology) at [the London School of Economics and Political Science](https://www.lse.ac.uk/) and an Associate at [the Institute for New Economic Thinking](https://www.inet.ox.ac.uk) at [the University of Oxford](https://www.ox.ac.uk). I finished my PhD at [the Centre for Sociological Research](https://soc.kuleuven.be/ceso) at [KU Leuven](https://www.kuleuven.be/kuleuven/) in Belgium.
 
 Research
 ------
