@@ -10,6 +10,10 @@ redirect_from: /resume
 
 Work experience
 ======
+__Co-founder and Chief Data Scientist__, Koios, 2023—Present
+<br>
+<span style="font-size:0.8em; line-height: 1.2em; display: block;">At [Koios](https://getkoios.ai/), my role involves developing and applying state-of-the-art audio deep learning models for predicting personality. I've designed an on-going data collection protocol, developing the technology from scratch, and rigorously tested validity of the predictions to ensure the clinical precision of our algorithms. My leadership also extends to deploying and monitoring algorithms in production, ensuring they deliver the highest possible value to our users.
+
 __Research Data Scientist__, QuantCo, 2021—Present
 <br>
 <span style="font-size:0.8em; line-height: 1.2em; display: block;">At [QuantCo](https://quantco.com/), my work focuses on researching and building models, combining causal inference with machine learning, and creating reliable prediction systems. My main work revolves around fraud detection but our products include algorithmic pricing, data-driven claims management, and high-dimensional forecasting solutions.</span>
