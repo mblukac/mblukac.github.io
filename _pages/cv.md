@@ -1,23 +1,26 @@
 ---
+title: ''
 layout: archive
-title: ""
 permalink: /cv/
-author_profile: true
-redirect_from:
-  - /resume
+author_profile: yes
+redirect_from: /resume
 ---
 
 {% include base_path %}
 
 Work experience
 ======
-__LSE Fellow in Computational Social Science__, Department of Methodology, London School of Economics and Political Science, 2020—Present
+__Research Data Scientist__, QuantCo, 2021—Present
 <br>
-<span style="font-size:0.8em; line-height: 1.2em; display: block;">As LSE Fellow, I am mainly involved in teaching advanced courses in master's programmes ([MSc in Social Research Methods](https://www.lse.ac.uk/Methodology/Study/MSc-Social-Research-Methods) and [MSc in Applied Social Data Science](https://www.lse.ac.uk/Methodology/Study/MSc-Applied-Social-Data-Science)). I lead seminars in [Data for Data Scientists](https://www.lse.ac.uk/resources/calendar2020-2021/courseGuides/MY/2020_MY472.htm) and [Applied Regression Analysis](https://www.lse.ac.uk/resources/calendar2020-2021/courseGuides/MY/2020_MY452.htm). My methodological research is focused on discovering heterogeneity of treatment effects and power analysis in conjoint experiments and how causal inference fails under violation of _no interference_ assumption in networked social contexts ([see poster here](/portfolio/NetworkInterference/)).</span>
+<span style="font-size:0.8em; line-height: 1.2em; display: block;">At [QuantCo](https://quantco.com/), my work focuses on researching and building models, combining causal inference with machine learning, and creating reliable prediction systems. My main work revolves around fraud detection but our products include algorithmic pricing, data-driven claims management, and high-dimensional forecasting solutions.</span>
 
 __Associate__, Institute of New Economic Thinking, University of Oxford, 2020—Present
 <br>
 <span style="font-size:0.8em; line-height: 1.2em; display: block;">Following my research visit in Fall 2019, I became an Associate of the [Complexity Economics](https://www.inet.ox.ac.uk/research/programmes/complexity-economics/) program, led by [J Doyne Farmer](https://www.inet.ox.ac.uk/people/j-doyne-farmer/). The group uses tools from complex systems science to generate new insights into a wide range of economic problems. With [Penny Mealy](https://www.inet.ox.ac.uk/people/penny-mealy/) and [R. Maria Del Rio-Chanona](https://www.inet.ox.ac.uk/people/rita-maria-del-rio-chanona/), we are currently developing a project focusing on skill use and retraining in the wake of automation and digitalisation.</span>
+
+__LSE Fellow in Computational Social Science__, Department of Methodology, London School of Economics and Political Science, 2020—2021
+<br>
+<span style="font-size:0.8em; line-height: 1.2em; display: block;">As LSE Fellow, I am mainly involved in teaching advanced courses in master's programmes ([MSc in Social Research Methods](https://www.lse.ac.uk/Methodology/Study/MSc-Social-Research-Methods) and [MSc in Applied Social Data Science](https://www.lse.ac.uk/Methodology/Study/MSc-Applied-Social-Data-Science)). I lead seminars in [Data for Data Scientists](https://www.lse.ac.uk/resources/calendar2020-2021/courseGuides/MY/2020_MY472.htm) and [Applied Regression Analysis](https://www.lse.ac.uk/resources/calendar2020-2021/courseGuides/MY/2020_MY452.htm). My methodological research is focused on discovering heterogeneity of treatment effects and power analysis in conjoint experiments and how causal inference fails under violation of _no interference_ assumption in networked social contexts ([see poster here](/portfolio/NetworkInterference/)).</span>
 
 __Researcher__, Centre for Sociological Research, KU Leuven, 2016-2020
 <br>
@@ -30,7 +33,7 @@ __Data Scientist__, IBM International Services Centre, 2015-2016
   
 Education
 ======
-__Ph.D. in Social Sciences__ (Computational Social Science), KU Leuven, 2021 (dissertation submitted)
+__Ph.D. in Social Sciences__ (Computational Social Science), KU Leuven, 2021
 <br>
 <span style="font-size:0.8em; line-height: 1.2em; display: block;">Dissertation: _Computational approaches to labour market segmentation_, supervised by Valeria Pulignano, Wim van Oorschot, and Bart Meuleman<br>-  Finished all courses in M.Sc. Statistics at the Leuven Statistics Research Centre (L-STAT)</span>
 
