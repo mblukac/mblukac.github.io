@@ -61,7 +61,7 @@ Now that you are connected to your AWS EC2 instance, we need to install some mis
 `./configure` <br>
 `make && make check` <br>
 `sudo make install` <br>
-`ldconfig` (thanks to [Rob Blackburn](https://www.blackburnlabs.com/about/) for emailing me about this!)<br>
+`sudo ldconfig` (thanks to [Rob Blackburn](https://www.blackburnlabs.com/about/) for emailing me about this!)<br>
 
 
   - It will take a while to install. When everything finishes, run a final command `sudo apt install libsodium-dev`. If this fails, see the following [page](https://itsfoss.com/could-not-get-lock-error/) for troubleshooting. Sometimes Ubuntu decides to start updating some system files in the background and will prevent you from finishing the installation. If no errors occured, you are ready to do some R magic 🪄 
@@ -101,7 +101,7 @@ function(){
 #* Return the sum of two numbers
 #* @param a The first number to add
 #* @param b The second number to add
-#* @post /sum
+#* @get /sum
 function(a, b){
   as.numeric(a) + as.numeric(b)
 }
