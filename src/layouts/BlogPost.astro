@@ -1,0 +1,49 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import Layout from './Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+
+type Props = CollectionEntry<'writing'>['data'];
+
+const { title, description, date, updatedDate } = Astro.props;
+---
+
+<Layout title={title} description={description}>
+	<Navbar />
+	
+	<main class="pt-32 pb-20 px-4">
+		<article class="max-w-container-narrow mx-auto prose prose-invert prose-lg" data-particle-color="#E8EEF2" data-particle-speed="0.2">
+			<div class="mb-12 text-center">
+				<div class="text-meta text-text-tertiary mb-4">
+					<time datetime={date.toISOString()}>
+						{date.toLocaleDateString('en-us', {
+							year: 'numeric',
+							month: 'long',
+							day: 'numeric',
+						})}
+					</time>
+					{updatedDate && (
+						<div class="italic">
+							Last updated on <time datetime={updatedDate.toISOString()}>
+								{updatedDate.toLocaleDateString('en-us', {
+									year: 'numeric',
+									month: 'long',
+									day: 'numeric',
+								})}
+							</time>
+						</div>
+					)}
+				</div>
+				<h1 class="text-h1 text-text-primary mb-4">{title}</h1>
+				<hr class="border-border mt-8" />
+			</div>
+			
+			<div class="text-text-secondary">
+				<slot />
+			</div>
+		</article>
+	</main>
+
+	<Footer />
+</Layout>

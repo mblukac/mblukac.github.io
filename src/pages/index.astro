@@ -1,0 +1,162 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import WorkScrollSection from '../components/WorkScrollSection.astro';
+import Button from '../components/Button.astro';
+
+const projects = [
+  {
+    title: 'Flank',
+    description: 'Agentic legal workflows for law firms and in-house teams',
+    items: [
+      'Lead AI strategy and product roadmap for autonomous legal agents',
+      'Redesigned document review and objection handling, achieving 96% accuracy in identifying objections and flagging provisions requiring human judgment',
+      'Built fully autonomous agent handling multi-step protocols, direct counterparty communication, obstacle navigation (e.g., OOO replies), and boundary enforcement',
+      'Design evaluation systems for accuracy, auditability, and alignment with professional standards'
+    ],
+    status: 'In production',
+    href: 'https://flank.ai',
+    variant: 'flank' as const
+  },
+  {
+    title: 'Sentra',
+    description: 'AI mental health support for veterans and first responders',
+    items: [
+      'Co-founded and built first prototype for AI-powered mental health support in crisis-adjacent populations',
+      'Pilot results: 82% of participants rated responses as highly relevant; 64% reported immediate stress relief; zero cases of increased anxiety',
+      'Implemented suicide intent detection with immediate human handoff protocol',
+      'Developed fully personalized conversational system with user-based knowledge graph guided by latest PTSD research',
+      'Partner with Wounded Warrior Project and UK Ministry of Defence'
+    ],
+    status: 'Pilot',
+    href: 'https://getsentra.ai',
+    variant: 'sentra' as const
+  },
+  {
+    title: 'PsySafe',
+    description: 'Open toolkit for mental health crisis response in chatbots',
+    items: [
+      'Risk detection patterns and escalation protocols for mental health crises',
+      'Policy templates for harm reduction and refusal behaviors',
+      'Ethics-based initiative exploring LLM-based detectors for mental health risk and ethical response pathways',
+      'Used by practitioners building crisis-sensitive AI systems'
+    ],
+    status: 'Open source',
+    href: 'https://github.com/mblukac/psysafe-ai',
+    variant: 'psysafe' as const
+  }
+];
+
+const writing = [
+  {
+    title: 'Why LLM Applications Fail in Production',
+    meta: 'LinkedIn · Oct 2024',
+    summary: "Most AI reliability problems aren't about the model—they're about unclear requirements and missing eval harnesses.",
+    href: '#'
+  },
+  {
+    title: 'The Ethics of Crisis Response in AI',
+    meta: 'Medium · Sep 2024',
+    summary: 'How to design refusal behaviors that don\'t abandon the user in their moment of need.',
+    href: '#'
+  }
+];
+---
+
+<Layout title="Martin Lukac - AI Practitioner-Researcher">
+  <Navbar />
+  
+  <main>
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center pt-20 relative overflow-hidden" data-particle-color="#4A90E2" data-particle-speed="0.5">
+      <div class="max-w-container mx-auto px-4 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <!-- Main Content - Centered -->
+          <div class="lg:col-span-7 flex flex-col gap-6">
+            <h1 class="text-display text-text-primary">
+              Building <span class="text-flank">AI Agency</span> <br />
+              in <span class="text-sentra">High-Stakes</span> Domains
+            </h1>
+            <p class="text-body-large text-text-secondary max-w-2xl leading-relaxed">
+              I bridge the gap between research and production. Currently deploying autonomous agents in legal tech and mental healthcare.
+            </p>
+            
+            <div class="flex flex-wrap gap-4 mt-4">
+              <Button href="/about" variant="primary">About Me</Button>
+              <Button href="/research" variant="secondary">Research</Button>
+            </div>
+          </div>
+
+          <!-- Profile Photo - Right Side -->
+          <div class="lg:col-span-5 flex justify-center lg:justify-end">
+            <div class="relative group w-64 md:w-80 lg:w-full max-w-md">
+              <!-- Subtle glow effect -->
+              <div class="absolute -inset-6 bg-gradient-to-br from-flank/10 via-sentra/10 to-psysafe/10 blur-3xl opacity-50 group-hover:opacity-70 transition-opacity duration-700"></div>
+              
+              <!-- Photo -->
+              <div class="relative aspect-[4/5] overflow-hidden rounded-3xl shadow-2xl">
+                <img 
+                  src="/images/profile_headshot.jpg" 
+                  alt="Martin Lukac, PhD" 
+                  class="w-full h-full object-cover grayscale-[15%] group-hover:grayscale-0 transition-all duration-700 ease-out group-hover:scale-[1.02]"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Introduction -->
+    <section class="section-padding px-4" data-particle-color="#6B7785" data-particle-speed="0.2">
+      <div class="max-w-container-narrow mx-auto">
+        <p class="text-h3 text-text-primary leading-relaxed">
+          I am an AI practitioner-researcher based between London and Berlin. My work focuses on <span class="text-flank font-medium border-b-2 border-flank/30">reliability</span> and <span class="text-sentra font-medium border-b-2 border-sentra/30">safety</span> in agentic systems.
+        </p>
+        <p class="text-body-large text-text-secondary mt-8 leading-relaxed">
+          Previously at <a href="https://gradient-labs.ai/" class="text-gradient font-medium hover:underline">Gradient Labs</a> and <a href="https://quantco.com" class="text-text-primary font-medium hover:underline">QuantCo</a>. I combine engineering rigor with a background in computational social science to build systems that work in the real world, not just benchmarks.
+        </p>
+      </div>
+    </section>
+
+    <!-- Current Work (Sticky Scroll) -->
+    <div id="work">
+      <WorkScrollSection projects={projects} />
+    </div>
+
+    <!-- Contact Section -->
+    <section class="section-padding px-4">
+      <div class="max-w-4xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div class="order-2 md:order-1 h-full">
+            <img src="/images/photos/IMG_1090.jpg" alt="Martin Lukac" class="w-full h-full object-cover object-center rounded-2xl shadow-2xl" />
+          </div>
+          <div class="order-1 md:order-2 space-y-6 flex flex-col justify-center h-full">
+            <h2 class="text-h3 text-text-primary">Working on AI deployments in high-stakes domains?</h2>
+            <p class="text-body text-text-secondary">
+              Let's talk about evaluation, guardrails, or ethical deployment practices.
+            </p>
+            <div class="flex gap-6">
+              <a href="mailto:m.b.lukac@gmail.com" class="p-4 text-text-tertiary hover:text-sentra hover:scale-110 transition-all">
+                <span class="sr-only">Email</span>
+                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+              </a>
+              <a href="https://linkedin.com/in/mblukac" class="p-4 text-text-tertiary hover:text-sentra hover:scale-110 transition-all">
+                <span class="sr-only">LinkedIn</span>
+                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              </a>
+              <a href="https://github.com/mblukac" class="p-4 text-text-tertiary hover:text-sentra hover:scale-110 transition-all">
+                <span class="sr-only">GitHub</span>
+                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>

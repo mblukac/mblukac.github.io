@@ -1,0 +1,162 @@
+---
+import ProjectCard from './ProjectCard.astro';
+
+interface Project {
+  title: string;
+  description: string;
+  items: string[];
+  status: string;
+  href: string;
+  variant: 'flank' | 'sentra' | 'psysafe';
+  logo?: string;
+}
+
+interface Props {
+  projects: Project[];
+}
+
+const { projects } = Astro.props;
+---
+
+<section id="work-scroll-container" class="relative">
+  {projects.map((project, index) => (
+    <div 
+      class="sticky top-0 h-screen flex items-center justify-center px-4 overflow-hidden"
+      style={`z-index: ${index + 1};`}
+    >
+      <!-- Particle background for each section -->
+      <div class="absolute inset-0 opacity-20 bg-bg-primary" 
+           data-particle-color={project.variant === 'flank' ? '#9B59B6' : project.variant === 'sentra' ? '#4A90E2' : '#D84B98'} 
+           data-particle-speed="0.5">
+      </div>
+
+      <div class="max-w-4xl w-full relative z-10 flex items-center">
+        <!-- Elegant card with colored left border -->
+        <div class={`relative bg-bg-primary/95 backdrop-blur-xl border border-border rounded-lg shadow-2xl overflow-hidden transition-all duration-300 hover:shadow-3xl hover:-translate-y-1 w-full min-h-[420px] ${
+          project.variant === 'flank' ? 'border-l-4 border-l-flank hover:border-l-flank/80' :
+          project.variant === 'sentra' ? 'border-l-4 border-l-sentra hover:border-l-sentra/80' : 
+          'border-l-4 border-l-psysafe hover:border-l-psysafe/80'
+        }`}>
+          <div class="p-6 md:p-8 flex flex-col h-full">
+            <!-- Header: Logo + Title + Status -->
+            <div class="flex items-start gap-5 mb-4">
+              <!-- Logo -->
+              <div class="flex-shrink-0">
+                <div class={`w-14 h-14 md:w-16 md:h-16 rounded-lg flex items-center justify-center p-3 ${
+                  project.variant === 'flank' ? 'bg-flank/5' : 
+                  project.variant === 'sentra' ? 'bg-sentra/5' : 'bg-psysafe/5'
+                }`}>
+                  {project.variant === 'flank' && (
+                    <img src="/683c566ff5908465c8f6c6f0_slack logo (1).svg" alt="Flank Logo" class="w-full h-full object-contain" />
+                  )}
+                  {project.variant === 'sentra' && (
+                    <img src="/shield_nobg_white.png" alt="Sentra Logo" class="w-full h-full object-contain" />
+                  )}
+                  {project.variant === 'psysafe' && (
+                    <img src="/psysafe_logo.png" alt="PsySafe Logo" class="w-full h-full object-contain" />
+                  )}
+                </div>
+              </div>
+
+              <!-- Title + Status -->
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center gap-3 mb-2">
+                  <h3 class="text-2xl md:text-3xl font-semibold text-text-primary">{project.title}</h3>
+                  <span class={`inline-flex items-center px-2.5 py-1 rounded-md text-xs font-medium uppercase tracking-wider whitespace-nowrap ${
+                    project.variant === 'flank' ? 'bg-flank/10 text-flank border border-flank/20' :
+                    project.variant === 'sentra' ? 'bg-sentra/10 text-sentra border border-sentra/20' :
+                    'bg-psysafe/10 text-psysafe border border-psysafe/20'
+                  }`}>
+                    {project.status}
+                  </span>
+                </div>
+                
+                <!-- Description -->
+                <p class="text-sm md:text-base text-text-secondary leading-relaxed">
+                  {project.description}
+                </p>
+              </div>
+            </div>
+
+            <!-- Bullet Points with more breathing room -->
+            <ul class="space-y-3.5 mb-6 flex-1">
+              {project.items.map(item => (
+                <li class="flex items-start text-text-secondary group">
+                  <span class={`mr-3 mt-2 w-1.5 h-1.5 rounded-full flex-shrink-0 transition-all ${
+                    project.variant === 'flank' ? 'bg-flank/60 group-hover:bg-flank' :
+                    project.variant === 'sentra' ? 'bg-sentra/60 group-hover:bg-sentra' :
+                    'bg-psysafe/60 group-hover:bg-psysafe'
+                  }`}></span>
+                  <span class="text-sm md:text-base leading-relaxed">{item}</span>
+                </li>
+              ))}
+            </ul>
+
+            <!-- CTA Button - Bottom Right -->
+            <div class="flex justify-end pt-4 border-t border-border">
+              <a 
+                href={project.href}
+                class={`inline-flex items-center gap-2 px-4 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 ${
+                  project.variant === 'flank' ? 'bg-flank/10 text-flank hover:bg-flank/20 border border-flank/20 hover:border-flank/40' :
+                  project.variant === 'sentra' ? 'bg-sentra/10 text-sentra hover:bg-sentra/20 border border-sentra/20 hover:border-sentra/40' :
+                  'bg-psysafe/10 text-psysafe hover:bg-psysafe/20 border border-psysafe/20 hover:border-psysafe/40'
+                }`}
+              >
+                Learn more
+                <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  ))}
+</section>
+
+<script>
+  // Fade out cards as they scroll away
+  function updateCardOpacity() {
+    const cards = document.querySelectorAll('#work-scroll-container > div');
+    
+    cards.forEach((card, index) => {
+      const rect = card.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+      
+      // Calculate how far the card has scrolled from the top
+      // When card is at top of viewport, progress = 0
+      // When card has scrolled past, progress increases
+      const scrollProgress = -rect.top / windowHeight;
+      
+      // Fade out when the next card starts coming in
+      // Start fading at 0.3 (30% scrolled) and complete fade at 0.8 (80% scrolled)
+      let opacity = 1;
+      if (scrollProgress > 0.3) {
+        opacity = Math.max(0, 1 - (scrollProgress - 0.3) / 0.5);
+      }
+      
+      // Apply opacity to the card
+      const cardElement = card.querySelector('.max-w-4xl > div');
+      if (cardElement) {
+        cardElement.style.opacity = opacity.toString();
+        cardElement.style.transition = 'opacity 0.3s ease-out';
+      }
+    });
+  }
+  
+  // Update on scroll with throttling for performance
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        updateCardOpacity();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+  
+  // Initial update
+  updateCardOpacity();
+</script>

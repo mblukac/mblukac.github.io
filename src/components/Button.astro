@@ -1,0 +1,37 @@
+---
+interface Props {
+  href?: string;
+  variant?: 'primary' | 'secondary' | 'ghost' | 'flank' | 'sentra' | 'psysafe';
+  size?: 'sm' | 'md';
+  class?: string;
+  [key: string]: any;
+}
+
+const { href, variant = 'primary', size = 'md', class: className, ...rest } = Astro.props;
+
+const baseStyles = "inline-flex items-center justify-center rounded-lg font-semibold transition-all duration-200 ease-out cursor-pointer";
+
+const sizeStyles = {
+  sm: "px-4 py-2 text-sm",
+  md: "px-6 py-3 text-base"
+};
+
+const variants = {
+  primary: "bg-sentra text-white hover:bg-[#5CA0F2] hover:-translate-y-0.5 hover:shadow-lg hover:shadow-sentra/20 border border-transparent",
+  secondary: "bg-transparent text-text-primary border border-border hover:border-border-hover hover:bg-bg-surface-accent",
+  ghost: "bg-transparent text-sentra hover:text-[#5CA0F2] hover:bg-bg-surface-accent/50 p-0 h-auto",
+  flank: "bg-flank text-white hover:brightness-110 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-flank/20 border border-transparent",
+  sentra: "bg-sentra text-white hover:brightness-110 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-sentra/20 border border-transparent",
+  psysafe: "bg-psysafe text-white hover:brightness-110 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-psysafe/20 border border-transparent"
+};
+
+const Element = href ? 'a' : 'button';
+---
+
+<Element 
+  href={href} 
+  class:list={[baseStyles, sizeStyles[size], variants[variant], className]}
+  {...rest}
+>
+  <slot />
+</Element>

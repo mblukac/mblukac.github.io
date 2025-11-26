@@ -1,0 +1,165 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+
+const timeline = [
+  {
+    period: 'June 2025 – Present',
+    role: 'AI Lead',
+    company: 'Flank (Berlin)',
+    description: 'Building agentic legal workflows and evaluation systems.',
+    variant: 'flank'
+  },
+  {
+    period: 'March 2025 – Present',
+    role: 'Co-Founder & CTO',
+    company: 'Sentra',
+    description: 'AI mental health support for veterans and first responders.',
+    variant: 'sentra'
+  },
+  {
+    period: 'Feb 2025 – Present',
+    role: 'Maintainer',
+    company: 'PsySafe',
+    description: 'Open toolkit for risk detection in conversational AI.',
+    variant: 'psysafe'
+  },
+  {
+    period: 'Sept 2024 – Feb 2025',
+    role: 'AI Engineer',
+    company: 'Gradient Labs',
+    href: 'https://gradient-labs.ai/',
+    description: 'Built automated evaluation modules and guardrails for customer support agents.',
+    variant: 'gradient'
+  },
+  {
+    period: 'April 2023 – June 2025',
+    role: 'Co-Founder & Chief Scientist',
+    company: 'Koios AI',
+    description: 'Deep learning for personality prediction from voice; deployed models to production.'
+  },
+  {
+    period: 'Aug 2021 – Aug 2024',
+    role: 'Research Data Scientist',
+    company: 'QuantCo',
+    href: 'https://quantco.com',
+    description: 'Machine Learning for fraud detection and health insurance (Germany & UK).'
+  },
+  {
+    period: '2016 – 2021',
+    role: 'PhD',
+    company: 'KU Leuven',
+    description: 'Computational Social Science: Labor Market Segmentation.'
+  }
+];
+
+const values = [
+  {
+    title: 'Deployed, Not Demoed',
+    description: 'Real-world lessons > lab benchmarks. I build for production environments where models meet messy reality.'
+  },
+  {
+    title: 'Ethics Through Practice',
+    description: "Values aren't checkboxes. Safety and fairness emerge from how systems are built, monitored, and governed."
+  },
+  {
+    title: 'Open by Default',
+    description: 'Methods, tools, and hard-won insights should be shareable. Raising the field\'s floor benefits everyone.'
+  }
+];
+---
+
+<Layout title="About - Martin Lukac">
+  <Navbar />
+  
+  <main class="pt-32 pb-20 px-4">
+    <div class="max-w-container-narrow mx-auto">
+      <h1 class="text-h2 text-text-primary mb-12">About Me</h1>
+
+      <!-- Bio Section -->
+      <section class="section-padding" data-particle-color="#6B7785" data-particle-speed="0.5">
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+          <div class="md:col-span-1">
+            <div class="relative h-full">
+              <img src="/images/photos/IMG_1646 (1).jpg" alt="Martin Lukac" class="w-full h-full min-h-[400px] object-cover object-right scale-110 rounded-2xl shadow-2xl" />
+              <div class="absolute inset-0 rounded-2xl bg-gradient-to-t from-bg-base/60 to-transparent pointer-events-none"></div>
+            </div>
+          </div>
+          
+          <div class="md:col-span-2 prose prose-lg prose-invert text-text-secondary">
+            <p class="text-body-large mb-6">
+              I am an AI practitioner and researcher focused on the reliability and safety of agentic systems. My work sits at the intersection of engineering and social science, building systems that are not only technically capable but also socially responsible.
+            </p>
+            <p class="text-body-large mb-6">
+              Currently, I am AI Lead at <a href="https://flank.ai" class="text-flank hover:underline">Flank</a>, where we are building autonomous agents for legal workflows. I also co-founded <a href="https://getsentra.ai" class="text-sentra hover:underline">Sentra</a>, an AI-powered mental health support platform. I maintain <a href="https://github.com/mblukac/psysafe-ai" class="text-psysafe hover:underline">PsySafe</a>, an open toolkit for mental health crisis detection and response in conversational AI.
+            </p>
+            <p class="text-body-large">
+              My background is in Computational Social Science, with a focus on causal inference, social network analysis, and machine learning. This informs my approach to AI deployment—viewing these systems not in isolation, but as parts of complex human environments.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Timeline -->
+      <section class="section-padding" data-particle-color="#4A90E2" data-particle-speed="1">
+        <h2 class="text-h2 text-text-primary mb-12">Experience</h2>
+        <div class="border-l-2 border-border pl-8 space-y-12">
+          {timeline.map((item) => (
+            <div class="relative">
+              <div class={`absolute -left-[39px] top-2 w-5 h-5 rounded-full bg-bg-base border-2 ${
+                item.variant === 'flank' ? 'border-flank' :
+                item.variant === 'sentra' ? 'border-sentra' :
+                item.variant === 'psysafe' ? 'border-psysafe' :
+                item.variant === 'gradient' ? 'border-gradient' :
+                'border-border'
+              }`}></div>
+              <span class="text-meta text-text-tertiary mb-2 block">{item.period}</span>
+              <h3 class="text-h4 text-text-primary">{item.role}</h3>
+              {item.href ? (
+                <a href={item.href} class={`font-medium mb-2 block hover:underline ${
+                  item.variant === 'flank' ? 'text-flank' :
+                  item.variant === 'sentra' ? 'text-sentra' :
+                  item.variant === 'psysafe' ? 'text-psysafe' :
+                  item.variant === 'gradient' ? 'text-gradient' :
+                  'text-text-primary'
+                }`}>{item.company}</a>
+              ) : (
+                <div class={`font-medium mb-2 ${
+                  item.variant === 'flank' ? 'text-flank' :
+                  item.variant === 'sentra' ? 'text-sentra' :
+                  item.variant === 'psysafe' ? 'text-psysafe' :
+                  item.variant === 'gradient' ? 'text-gradient' :
+                  'text-text-primary'
+                }`}>{item.company}</div>
+              )}
+              <p class="text-body text-text-secondary leading-relaxed">{item.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <!-- Values/Principles -->
+      <section class="pb-20" data-particle-color="#E27B7B" data-particle-speed="0.8">
+        <h2 class="text-h2 text-text-primary mb-12">Core Principles</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="bg-bg-surface p-8 rounded-xl border border-border">
+            <h3 class="text-h4 text-text-primary mb-4">Deployed Clarity</h3>
+            <p class="text-body text-text-secondary">
+              Systems should be transparent in their operation and failure modes. Ambiguity in high-stakes AI is a safety risk.
+            </p>
+          </div>
+          <div class="bg-bg-surface p-8 rounded-xl border border-border">
+            <h3 class="text-h4 text-text-primary mb-4">Human-Centric Agency</h3>
+            <p class="text-body text-text-secondary">
+              AI agents should amplify human capability, not replace human judgment in critical loops.
+            </p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+  <Footer />
+</Layout>

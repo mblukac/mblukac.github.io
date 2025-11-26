@@ -1,0 +1,190 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Research - Martin Lukac">
+  <Navbar />
+  
+  <main class="pt-32 pb-20 px-4 relative overflow-hidden">
+    <div class="max-w-container-narrow mx-auto relative z-10">
+      <h1 class="text-h2 text-text-primary mb-20">Research</h1>
+
+      <!-- Philosophy Section: Neutral/Calm -->
+      <section class="section-padding" data-particle-color="#6B7785" data-particle-speed="0.5">
+        <p class="text-body-large text-text-secondary leading-relaxed mb-16 max-w-3xl">
+          My research philosophy centers on the <span class="text-text-primary font-medium">rigorous deployment of AI in high-stakes environments</span>. Whether automating legal workflows at <span class="text-flank font-medium">Flank</span> or supporting mental health at <span class="text-sentra font-medium">Sentra</span>, I believe that safety and reliability are not afterthoughts but core design constraints.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Flank: Red/Active -->
+          <div class="p-8 bg-bg-surface/80 backdrop-blur-sm rounded-xl border border-border" data-particle-color="#E27B7B" data-particle-speed="2">
+            <h3 class="text-h4 text-text-primary mb-4">Agentic Reliability</h3>
+            <p class="text-body text-text-secondary leading-relaxed">
+              Moving beyond stochastic outputs to auditable, protocol-driven actions. In legal tech, this means ensuring agents can handle objections and draft documents with precision and traceability.
+            </p>
+          </div>
+
+          <!-- Sentra: Blue/Steady -->
+          <div class="p-8 bg-bg-surface/80 backdrop-blur-sm rounded-xl border border-border" data-particle-color="#4A90E2" data-particle-speed="1">
+            <h3 class="text-h4 text-text-primary mb-4">Safety in Practice</h3>
+            <p class="text-body text-text-secondary leading-relaxed">
+              Implementing concrete guardrails for vulnerability and risk. For <span class="text-sentra font-medium">Sentra</span> and <span class="text-psysafe font-medium">PsySafe</span>, this involves detecting crisis signals and ensuring safe handoffs, bridging the gap between theoretical alignment and clinical reality.
+            </p>
+          </div>
+
+          <!-- Societal: Green/Slow -->
+          <div class="p-8 bg-bg-surface/80 backdrop-blur-sm rounded-xl border border-border md:col-span-2" data-particle-color="#7EC699" data-particle-speed="0.3">
+            <h3 class="text-h4 text-text-primary mb-4">Societal Impact</h3>
+            <p class="text-body text-text-secondary leading-relaxed">
+              Grounded in my background in computational social science, I study how these deployments affect labor markets and human well-being, ensuring technology serves as a force for improvement rather than displacement.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Recent Publications: White/Standard -->
+      <section class="section-padding" data-particle-color="#E8EEF2" data-particle-speed="1">
+        <h2 class="text-h2 text-text-primary mb-12">Recent Publications</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="bg-bg-surface/80 backdrop-blur-sm p-10 rounded-xl border border-border hover:border-border-hover transition-colors h-full flex flex-col justify-center">
+            <h3 class="text-h3 text-text-primary mb-4">
+              <a href="https://www.nature.com/articles/s41598-024-81047-0" class="hover:text-flank transition-colors">
+                Scientific Reports: Personality Prediction from Voice
+              </a>
+            </h3>
+            <p class="text-body-large text-text-secondary mb-6">
+              Our latest work published in Nature Portfolio's Scientific Reports demonstrates the validity of deep learning models in inferring Big Five personality traits from short audio clips.
+            </p>
+            <a href="https://www.nature.com/articles/s41598-024-81047-0" class="text-flank font-semibold hover:underline text-body-large mt-auto">Read the paper →</a>
+          </div>
+          <div class="hidden md:block h-full">
+            <img src="/images/photos/IMG_1091.jpg" alt="Martin Lukac presenting research" class="w-full h-full object-cover object-center rounded-2xl shadow-2xl" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Ongoing Research -->
+      <section class="section-padding" data-particle-color="#E27B7B" data-particle-speed="0.6">
+        <h2 class="text-h2 text-text-primary mb-8">Ongoing Research</h2>
+        <div class="bg-bg-surface/50 backdrop-blur-sm p-8 rounded-xl border border-border">
+          <h3 class="text-h3 text-text-primary mb-4">Passion vs. Pretense</h3>
+          <p class="text-body text-text-secondary leading-relaxed">
+            Investigating the interaction between passion expression and voice, specifically focusing on distinguishing authentic from faked passion. This is a collaborative project with <a href="https://kaikrautter.github.io/" class="text-flank hover:underline">Kai Krautter</a>.
+          </p>
+        </div>
+      </section>
+
+      <!-- Selected Speaking -->
+      <section class="pb-20" data-particle-color="#7EC699" data-particle-speed="0.4">
+        <h2 class="text-h2 text-text-primary mb-12">Selected Speaking</h2>
+        
+        <div class="space-y-8">
+          <!-- 2025 -->
+          <div class="group">
+            <div class="flex flex-col md:flex-row md:items-baseline gap-2 md:gap-8">
+              <span class="text-flank font-mono font-medium min-w-[60px]">2025</span>
+              <div class="flex-1">
+                <h3 class="text-h4 text-text-primary group-hover:text-flank transition-colors">
+                  <a href="https://www.oii.ox.ac.uk/" class="hover:underline">Oxford Internet Institute</a>
+                </h3>
+                <p class="text-body text-text-secondary mt-1">Start your own startup! workshop (Hosted by <a href="https://www.oii.ox.ac.uk/people/profiles/fabian-braesemann/" class="text-flank hover:underline">Fabian Braesemann</a>)</p>
+              </div>
+              <span class="text-meta text-text-tertiary">Oxford</span>
+            </div>
+          </div>
+
+          <!-- 2024 -->
+          <div class="group">
+            <div class="flex flex-col md:flex-row md:items-baseline gap-2 md:gap-8">
+              <span class="text-text-tertiary font-mono font-medium min-w-[60px]">2024</span>
+              <div class="flex-1">
+                <h3 class="text-h4 text-text-primary group-hover:text-flank transition-colors">
+                  <a href="https://www.lse.ac.uk/study-at-lse/executive-education/programmes/data-science-and-ai-for-executives" class="hover:underline">LSE Executive Education</a>
+                </h3>
+                <p class="text-body text-text-secondary mt-1">Guest Lecturer: Data Science and AI for Executives (Spring & Autumn)</p>
+              </div>
+              <span class="text-meta text-text-tertiary">London</span>
+            </div>
+          </div>
+
+          <!-- 2023 -->
+          <div class="group">
+            <div class="flex flex-col md:flex-row md:items-baseline gap-2 md:gap-8">
+              <span class="text-text-tertiary font-mono font-medium min-w-[60px]">2023</span>
+              <div class="flex-1">
+                <h3 class="text-h4 text-text-primary group-hover:text-flank transition-colors">
+                  <a href="https://www.lse.ac.uk/study-at-lse/executive-education/programmes/data-science-and-ai-for-executives" class="hover:underline">LSE Executive Education</a>
+                </h3>
+                <p class="text-body text-text-secondary mt-1">Guest Lecturer: Data Science for Executives</p>
+              </div>
+              <span class="text-meta text-text-tertiary">London</span>
+            </div>
+          </div>
+
+          <!-- 2020 -->
+          <div class="group">
+            <div class="flex flex-col md:flex-row md:items-baseline gap-2 md:gap-8">
+              <span class="text-text-tertiary font-mono font-medium min-w-[60px]">2020</span>
+              <div class="flex-1">
+                <h3 class="text-h4 text-text-primary group-hover:text-flank transition-colors">Conference on Digital Experimentation (CODE) @ MIT</h3>
+                <p class="text-body text-text-secondary mt-1">Discovering heterogeneity of treatment effects in conjoint experiments</p>
+              </div>
+              <span class="text-meta text-text-tertiary">Online</span>
+            </div>
+          </div>
+
+          <!-- 2019 -->
+          <div class="group">
+            <div class="flex flex-col md:flex-row md:items-baseline gap-2 md:gap-8">
+              <span class="text-text-tertiary font-mono font-medium min-w-[60px]">2019</span>
+              <div class="flex-1">
+                <h3 class="text-h4 text-text-primary group-hover:text-flank transition-colors">International Conference for Computational Social Science (IC2S2)</h3>
+                <p class="text-body text-text-secondary mt-1">Probing causal inference in the face of interference: simulations of social networks</p>
+              </div>
+              <span class="text-meta text-text-tertiary">Amsterdam</span>
+            </div>
+          </div>
+
+          <div class="group">
+            <div class="flex flex-col md:flex-row md:items-baseline gap-2 md:gap-8">
+              <span class="text-text-tertiary font-mono font-medium min-w-[60px]">2019</span>
+              <div class="flex-1">
+                <h3 class="text-h4 text-text-primary group-hover:text-flank transition-colors">Rostock Retreat</h3>
+                <p class="text-body text-text-secondary mt-1">Reputation systems and recruitment in online labor markets</p>
+              </div>
+              <span class="text-meta text-text-tertiary">Rostock</span>
+            </div>
+          </div>
+
+          <!-- 2018 -->
+          <div class="group">
+            <div class="flex flex-col md:flex-row md:items-baseline gap-2 md:gap-8">
+              <span class="text-text-tertiary font-mono font-medium min-w-[60px]">2018</span>
+              <div class="flex-1">
+                <h3 class="text-h4 text-text-primary group-hover:text-flank transition-colors">Complex Networks and their Applications</h3>
+                <p class="text-body text-text-secondary mt-1">Reputation systems and recruitment in online labor markets</p>
+              </div>
+              <span class="text-meta text-text-tertiary">Cambridge</span>
+            </div>
+          </div>
+
+          <div class="group">
+            <div class="flex flex-col md:flex-row md:items-baseline gap-2 md:gap-8">
+              <span class="text-text-tertiary font-mono font-medium min-w-[60px]">2018</span>
+              <div class="flex-1">
+                <h3 class="text-h4 text-text-primary group-hover:text-flank transition-colors">Industrial Relations Conference in Europe (IREC)</h3>
+                <p class="text-body text-text-secondary mt-1">Developing a cross-national comparative framework for studying labour market segmentation</p>
+              </div>
+              <span class="text-meta text-text-tertiary">Leuven</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <Footer />
+</Layout>

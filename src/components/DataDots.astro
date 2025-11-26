@@ -1,0 +1,65 @@
+---
+---
+
+<canvas id="data-dots" class="absolute top-0 left-0 w-full h-full -z-10 pointer-events-none opacity-60"></canvas>
+
+<script>
+  const canvas = document.getElementById('data-dots') as HTMLCanvasElement;
+  const ctx = canvas.getContext('2d');
+
+  let width = canvas.width = window.innerWidth;
+  let height = canvas.height = window.innerHeight;
+
+  const dots: { x: number; y: number; vx: number; vy: number; color: string }[] = [];
+  const colors = ['#9B59B6', '#4A90E2', '#D84B98']; // Flank (purple), Sentra (blue), PsySafe (pink) colors
+
+  function init() {
+    width = canvas.width = window.innerWidth;
+    height = canvas.height = window.innerHeight;
+    dots.length = 0;
+
+    // Create a grid of dots
+    const cols = Math.floor(width / 40);
+    const rows = Math.floor(height / 40);
+
+    for (let i = 0; i < cols; i++) {
+      for (let j = 0; j < rows; j++) {
+        // Only add dots in a certain pattern (e.g., a wave or random clusters)
+        if (Math.random() > 0.7) {
+          dots.push({
+            x: i * 40 + Math.random() * 20,
+            y: j * 40 + Math.random() * 20,
+            vx: (Math.random() - 0.5) * 0.2,
+            vy: (Math.random() - 0.5) * 0.2,
+            color: colors[Math.floor(Math.random() * colors.length)]
+          });
+        }
+      }
+    }
+  }
+
+  function animate() {
+    if (!ctx) return;
+    ctx.clearRect(0, 0, width, height);
+
+    dots.forEach(dot => {
+      dot.x += dot.vx;
+      dot.y += dot.vy;
+
+      // Bounce off edges
+      if (dot.x < 0 || dot.x > width) dot.vx *= -1;
+      if (dot.y < 0 || dot.y > height) dot.vy *= -1;
+
+      ctx.fillStyle = dot.color;
+      ctx.beginPath();
+      ctx.arc(dot.x, dot.y, 1.5, 0, Math.PI * 2);
+      ctx.fill();
+    });
+
+    requestAnimationFrame(animate);
+  }
+
+  window.addEventListener('resize', init);
+  init();
+  animate();
+</script>

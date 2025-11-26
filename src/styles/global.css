@@ -1,0 +1,131 @@
+@import url('https://rsms.me/inter/inter.css');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+    /* Colors */
+    --color-bg-primary: #0A0E14;
+    --color-bg-surface: #131820;
+    --color-bg-surface-accent: #1C2433;
+    --color-bg-elevated: #242D3F;
+
+    --color-text-primary: #E8EEF2;
+    --color-text-secondary: #9BA5B4;
+    --color-text-tertiary: #6B7785;
+
+    --color-flank: #9B59B6;
+    --color-sentra: #4A90E2;
+    --color-psysafe: #D84B98;
+    --color-gradient: #FF7A37;
+
+    --color-border: rgba(255, 255, 255, 0.08);
+    --color-border-hover: rgba(255, 255, 255, 0.16);
+    --color-focus: #4A90E2;
+    --color-selection-bg: rgba(74, 144, 226, 0.2);
+
+    /* Fonts */
+    --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-code: 'JetBrains Mono', 'SF Mono', Monaco, 'Cascadia Code', monospace;
+
+    /* Spacing */
+    --spacing-container-narrow: 800px;
+    --spacing-container-standard: 1200px;
+    --spacing-container-wide: 1400px;
+}
+
+/* Custom Utilities */
+@layer utilities {
+    .text-display {
+        font-size: clamp(48px, 8vw, 72px);
+        font-weight: 700;
+        line-height: 1.1;
+        letter-spacing: -0.02em;
+    }
+
+    .text-h2 {
+        font-size: clamp(32px, 5vw, 48px);
+        font-weight: 600;
+        line-height: 1.2;
+        letter-spacing: -0.01em;
+    }
+
+    .text-h3 {
+        font-size: clamp(24px, 3vw, 32px);
+        font-weight: 600;
+        line-height: 1.3;
+    }
+
+    .text-h4 {
+        font-size: clamp(20px, 2.5vw, 24px);
+        font-weight: 600;
+        line-height: 1.4;
+    }
+
+    .text-body-large {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 1.7;
+    }
+
+    .text-body {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.6;
+    }
+
+    .text-meta {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.4;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+    }
+
+    /* Section Spacing */
+    .section-padding {
+        padding-top: 8rem;
+        padding-bottom: 8rem;
+    }
+
+    @media (min-width: 768px) {
+        .section-padding {
+            padding-top: 10rem;
+            padding-bottom: 10rem;
+        }
+    }
+}
+
+/* Base Styles */
+@layer base {
+    :root {
+        color-scheme: dark;
+    }
+
+    body {
+        font-family: var(--font-primary);
+        font-size: 18px;
+        line-height: 1.6;
+        color: var(--color-text-primary);
+        background-color: var(--color-bg-primary);
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        * {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+        }
+    }
+
+    *:focus-visible {
+        outline: 2px solid var(--color-focus);
+        outline-offset: 2px;
+    }
+}

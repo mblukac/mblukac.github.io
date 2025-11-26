@@ -1,0 +1,64 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  items: string[];
+  status: string;
+  href: string;
+  variant: 'flank' | 'sentra' | 'psysafe';
+}
+
+const { title, description, items, status, href, variant } = Astro.props;
+
+const variants = {
+  flank: {
+    border: 'border-t-flank',
+    hover: 'hover:shadow-flank/20',
+    icon: 'text-flank',
+    status: 'text-flank'
+  },
+  sentra: {
+    border: 'border-t-sentra',
+    hover: 'hover:shadow-sentra/20',
+    icon: 'text-sentra',
+    status: 'text-sentra'
+  },
+  psysafe: {
+    border: 'border-t-psysafe',
+    hover: 'hover:shadow-psysafe/20',
+    icon: 'text-psysafe',
+    status: 'text-psysafe'
+  }
+};
+
+const style = variants[variant];
+---
+
+<div class={`bg-bg-surface border border-border rounded-xl p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:border-border-hover border-t-4 ${style.border} ${style.hover} flex flex-col h-full`}>
+  <div class="mb-6">
+    <div class={`w-8 h-8 mb-4 ${style.icon}`}>
+      <slot name="icon" />
+    </div>
+    <h3 class="text-h3 mb-2 text-text-primary">{title}</h3>
+    <p class="text-body text-text-secondary">{description}</p>
+  </div>
+
+  <ul class="space-y-3 mb-8 flex-grow">
+    {items.map(item => (
+      <li class="flex items-start text-text-secondary">
+        <span class="mr-2 mt-1.5 w-1.5 h-1.5 rounded-full bg-text-tertiary flex-shrink-0"></span>
+        <span class="text-base">{item}</span>
+      </li>
+    ))}
+  </ul>
+
+  <div class="mt-auto">
+    <div class={`text-meta mb-6 ${style.status}`}>
+      Status: {status}
+    </div>
+    <a href={href} class="inline-flex items-center text-text-primary font-semibold hover:text-flank transition-colors group">
+      Learn more 
+      <span class="ml-2 transition-transform group-hover:translate-x-1">→</span>
+    </a>
+  </div>
+</div>

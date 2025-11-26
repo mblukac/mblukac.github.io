@@ -1,0 +1,27 @@
+---
+import Button from './Button.astro';
+
+const navItems = [
+  { label: 'Work', href: '/#work' },
+  { label: 'Writing', href: '/writing' },
+  { label: 'Research', href: '/research' },
+  { label: 'About', href: '/about' },
+];
+---
+
+<nav class="fixed top-0 w-full h-20 bg-bg-primary/95 backdrop-blur-md border-b border-border z-50">
+  <div class="max-w-container-wide mx-auto px-8 h-full flex items-center justify-between">
+    <a href="/" class="text-lg font-bold text-text-primary hover:text-flank transition-colors">
+      Martin Lukac, PhD
+    </a>
+
+    <div class="hidden md:flex items-center gap-8">
+        <a href="/#work" class="text-sm font-medium text-text-secondary hover:text-text-primary transition-colors">Work</a>
+        <a href="/about" class="text-sm font-medium text-text-secondary hover:text-text-primary transition-colors">About</a>
+        <a href="/research" class="text-sm font-medium text-text-secondary hover:text-text-primary transition-colors">Research</a>
+        <Button href="https://github.com/mblukac/psysafe-ai" variant="psysafe" size="sm">
+          PsySafe
+        </Button>
+      </div>
+  </div>
+</nav>
