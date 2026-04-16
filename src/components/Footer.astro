@@ -1,5 +1,4 @@
 ---
-const currentYear = 2026;
 ---
 
 <footer class="bg-bg-surface py-12 border-t border-border mt-auto">
@@ -24,7 +23,14 @@ const currentYear = 2026;
     </div>
 
     <div class="text-text-tertiary text-sm">
-      &copy; {currentYear} Martin Lukac
+      &copy; <span id="footer-year"></span> Martin Lukac
     </div>
   </div>
 </footer>
+
+<script>
+  const yearElement = document.getElementById('footer-year');
+  if (yearElement) {
+    yearElement.textContent = new Date().getFullYear().toString();
+  }
+</script>
